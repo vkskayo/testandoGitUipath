@@ -1,0 +1,263 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="LimparCampos_Cadastro" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1283,2898" sap2010:WorkflowViewState.IdRef="LimparCampos_Cadastro_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="34">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Processamento:&#xA;Apaga todos os campos necessários no GD4, para que o cadastro inicie do 0&#xA;(Campos que não mudam ou que o robô vai escrever futuramente ele não apaga, pois já vai apagar na hora de escrever)" DisplayName="LimparCampos_Cadastro" sap:VirtualizedContainerService.HintSize="722,2833" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome GD4" sap:VirtualizedContainerService.HintSize="680,2684" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="84031252-efa3-4ec7-952d-0aa600d45067" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Sequence - Limpa dados" sap:VirtualizedContainerService.HintSize="646,2468" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into - Data Mobilização" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="604,216" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="WindowMessages" ScopeIdentifier="84031252-efa3-4ec7-952d-0aa600d45067" Text="  [k(enter)]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://gd4.autodoc.com.br/dashboard/empresa/colaborador/form/527594/duplicar-colaborador" DesignTimeRectangle="754, 448, 516, 34" ElementType="InputBox" FriendlyName="'22/06/2022'" FullSelectorArgument="&lt;webctrl id='data_mobilizacao' tag='INPUT' type='text' class='form-control date' aaname='Data Mobilização' /&gt;" FuzzyAccuracy="0.7" FuzzySelectorArgument="&lt;webctrl id='data_mobilizacao' tag='INPUT' type='text' class='form-control date' aaname='Data Mobilização' /&gt;" Guid="bf9dde2a-d393-4126-a3a6-df58e99ca0be" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAggAAAAmCAYAAAChxWMMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAALpSURBVHhe7d1BTttAFAZgLskFuAAHYM+aNXdgyZojcASWBTWqEUJCgMDlRXkwzIwdWpGqUb5PeiLxzHjs1fvjRO3eCABQERAAgMbej5+/RqWUUkrtbt0shvH27n58eXldxQMBQSmllFKrGt5CQnr/iiEHAYDd8vj0vMwA14thdURAAADe1DlAQAAABAQAoCUgAAANAQEAaAgIAEBDQAAAGgICANAQEACAhoAAADQ2EhCGYRgPDw/H/f39ZR0fH48PDw+r0XE8Pz9/H4u6vLxcjXw4PT1dzgv1+er59XiuS7F3XEOsy9c5N9bF+jS317q1X7kvANgGGwkIZ2dnnxpn2eyvrq7Gi4uL5esQ74+OjpomHY04/pbNPcdifqzrve+JsZOTk+W5Yu9yblxXXF9Yt9fc2ji+7r4AYFtsJCDUykZa6zX4aNBl483mnuJ8GTjK11Pm5sReEQri/Ov2qpVra18JLgDwv/onAaF8glDrfdKO+fkpvteEM0DEsWjo8cQiH+sfHBx8aso5Z6pRx3VlGJnbq6dcW+vdFwBsi40HhF7TTXEsxmJOisZaforvNeg8ZzTf+FuO1/v11qe6ic/tVV//XADo3RcAbJONBoRokPUP+VI20frJQrwvj/UadDbyOG/9GL8+FvN6jTrG49rKtXN7lXpr09R9AcA22VhA6DXblE20btxxvP46IF5P/S6gd54yIMTrGK8DSoz1Pv3P7ZWm1oap+wKAbbORgPA34SDEsfrTej2/DACh3qt8Xzf38CcNvt5LOABgV3x7QIjmWf47Aln5VUM07HosKo5PfR1Qn7OeU54z94mGXT+NyCaec7PKHzZO7bVu7dx9AcC2+faAAABsPwEBAGgICABAQ0AAABoCAgDQEBAAgIaAAAA0BAQAoCEgAAANAQEA+OTx6XmZAa4XH/+1wF4GA6WUUkrtdg1396t4ICAopZRSO183i2G8fQsHL6+vq3hQfMUAAJAEBACgMo6/Aei0SRI8v8jnAAAAAElFTkSuQmCC" InformativeScreenshot="8379a9c3f269002550939aafc2c1bba4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Autodoc - GDFor | Colaborador' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="715, 425, 98, 18" ElementType="Text" FriendlyName="'Data Mobilização'" FullSelectorArgument="&lt;webctrl aaname='Data Mobilização' parentid='user-profile' tag='LABEL' /&gt;" FuzzyAccuracy="0.65" FuzzySelectorArgument="&lt;webctrl aaname='Data Mobilização' parentid='user-profile' tag='LABEL' check:innerText='Data Mobilização' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGYAAAAWCAYAAAAy/emjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAJeSURBVGhD7ZbLjcIwFEWnFfqgCDpAVEADFEAB7GFLE6zZsqYGtmw9Oih35vLGTmBIJC98pCix/fx+1wl8pUaVNGEqpQlTKU2YSmnCVEoTplKehDkej2k2mz1d5/O5W50O4s7n83S9XruZX7bbbVosFul2u3UzZdi/2WzS/X7vZsrgd+ra1E/ikNvlculWhvkjDJegwPV6/TQ3BfhfLpd/4iAG8Ver1SjCIIZiuDA+PxbksN/vH3f8v3q4RK8wQLGvNuZwOLwVXBBzt9s9CvCmah5xxhDGcWFqZFAYiqRYigaK8U8d9tjQPM3pdORscyiuN0txGbswMRbPEoIcGXOQcjHdf+45+vb9rOfmgbh8irXmfjUXP9XRn/aIQWHAi3BolppGUdiVTrbbRhSXGPgAiuBtiftiLuzzPRwKNUCNlr3vLT2Lvnx9jYuD4E3PgX/P09/snI+33xjufjr0duSEKdlGFJc1FcyYYnzOn4UX6c/Ca3pVmFgzlGrxhkeIK3su2XlOIubw1m9MbIyPozB9thGPi4/T6fTjy/flfEwhDGPvQ4zr45Iwcd7HnpOIOfQKQ2BOhuZcJMCRvzF+yvpsIx4XOz9d2HtTYgHsky0xiaEcYk6+t/TMXf5EXy0xP+F5Ac8a488PEHsHP2X+6sUfLMC51nHOWElpv5Lus3XYxwUkS6FqFPZeuNblV8UCuTL2dfkF1nJi6JkY5K697p+75mItxPXPXM4Xf535zRTYaC3X5ydhGv+HxnrjP6UJMyK8Bf6GfkITZgT886rP46c0YSqlCVMpTZhKacJUSUrfFtTJmExDq+0AAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into - Processo Trabalhista" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="604,216" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="Simulate" ScopeIdentifier="84031252-efa3-4ec7-952d-0aa600d45067" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://gd4.autodoc.com.br/dashboard/empresa/colaborador/form/527594/duplicar-colaborador" DesignTimeRectangle="715, 526, 555, 34" ElementType="InputBox" FriendlyName="'INPUT numero_processo'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='number' class='form-control' aaname='Processo Trabalhista' /&gt;" FuzzyAccuracy="0.68" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='number' class='form-control' aaname='Processo Trabalhista' /&gt;" Guid="3464e94f-d885-4fee-b8c0-c917c86b9786" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAi8AAAAmCAYAAAAMRHulAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAHFSURBVHhe7drBSuRAFIbRecR+/xcYZcS2xY1KOnolFSTUOLlzF+mCc+DfVCX7j5BfMwDAQMQLADCUNV6m6To/Pb/M9w/n+fefRzMzM7PDF10SfRKd0qzxcv686L1kZmZmdvSiU5o1Xu6WLy6vb+/LCQDAsaJLok+iU5o1XlrZAADckm2jiBcA4KaJFwBgKOIFABiKeAEAhiJeAICyy+Xy38sSLwBAWS9K9i5LvAAAZb0o2bss8QIAlPWipO10OnXP27LECwBQ1ouSWIRLW+8+liVeAICyXpR8D5efAiZLvAAAZdsg6YVL2/bZLPECAJRtgySzLPECAJT1omTvssQLAFDWi5K9yxIvAEBZL0r2Lku8AABl2yDp/ajbtn02S7wAAGXbIIntCZdYlngBAMp6URL7V7jEssQLAFDWi5K2n8IlliVeAICyXpTsXZZ4AQDKelGyd1niBQAo60XJ3mWJFwBgKOIFABiKeAEAhiJeAIChiBcAYCh/jZe7h/PXxevb+3ICAHCs6JLok+iUZo2X8/PLWjZmZmZmt7TolGaNl2m6fl3cL19gzMzMzI5edMnTZ59M1+tSLN/iBQBgBOIFABjIPH8ApL8afepsJgEAAAAASUVORK5CYII=" InformativeScreenshot="2c8abbc40fc45c5dd6b7c1951d7518dd.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Autodoc - GDFor | Colaborador' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="715, 504, 118, 18" ElementType="Text" FriendlyName="'Processo Trabalhista'" FullSelectorArgument="&lt;webctrl aaname='Processo Trabalhista' parentid='user-profile' tag='LABEL' class='control-label' /&gt;" FuzzyAccuracy="0.57" FuzzySelectorArgument="&lt;webctrl aaname='Processo Trabalhista' parentid='user-profile' tag='LABEL' class='control-label' check:innerText='Processo Trabalhista' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHoAAAAWCAYAAAAPb4jFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAJKSURBVGhD7ZbRjcJADESvFfqgCFqgAhqgAArgn28KoAd6oAZ++c3pRTdomFtCDhAn2B0pStZe22NPsvDVNVSBJnQlaEJXgiZ0JWhCV4ImdCW4EHq73XaTyeR8zWaz7ng8/njfE6fTqVssFhd96aLfv4KYe+IOh0O3XC57PswUTq+c7S+hvYn9ft8TgtwnwId9L14hNPlXq9XP6jkYFBpy8/n87b9q4V2EHgM+Qq6xuPlF683Cvtvt+uN8Op32xAF7/Dj04uxhb/o8xn8euLOWT6dJ1nCO8JP91k9NSWhs6/X6nIfc+KldyoufHOrLZwGcj/u8NrnI7zXUK6CGeiz1zuU29gxxBoO/0Vk8g3Nw+DgBsPuzI2N8TQ29DAJ2hud1BTUtEOucE1kbYEOQrOvwOty9BvHXTj1y6kPx2uxlll6TfVqr3q3ex3IGg1+0o+Qr2UTYm3Sw318mLr1AGnq+UIrxfAyBwREjEIMIpcEAH7ZQsgFqOUf1mT0nj+xPnL1OiSdxKbSePY/g+4VrnMG/CJ0xCQaA2Pl1klMN5IDBs4ROjr5On/PInn19r9CC9w58P8iYXD8kdA4J4n50l4aOb8wfvGvxPrzkhC9fDkfyBSUb+ZUXOzm15u41PB6fC83zs4QGQ70PcQYPCQ0orqMi/5jwjE1+NeIxXE7e7axFWrasQax8LkAJPmzhmk28uW82m3Pv3Fm7X3wQjpNIfNjHHz3gdcYKPdS7cyRuiDO4ELrhc9GErgRN6ErQhK4ETehK0ISuBE3oKtB134TAbhFp/XKIAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </uix:NTypeInto.Text>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into - Observacoes" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="604,216" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="Simulate" ScopeIdentifier="84031252-efa3-4ec7-952d-0aa600d45067" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://gd4.autodoc.com.br/dashboard/empresa/colaborador/form/527594/duplicar-colaborador" DesignTimeRectangle="715, 762, 1126, 72" ElementType="InputBox" FriendlyName="'TEXTAREA observacoes'" FullSelectorArgument="&lt;webctrl id='observacoes' tag='TEXTAREA' class='form-control' aaname='Observações' /&gt;" FuzzyAccuracy="0.7" FuzzySelectorArgument="&lt;webctrl id='observacoes' tag='TEXTAREA' class='form-control' aaname='Observações' /&gt;" Guid="6abcc59d-5213-4fc1-8c3b-5ba75099cec0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABGoAAABMCAYAAAA1DVE+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAALNSURBVHhe7dxBaoNQGIXRrjZbb0JDDSGTpOhr/6ASQtOO1Ds4By6CDzfw8fCtAQAAABBBqAEAAAAIMYeavh/a6Xxph2PX3j8+zczMzMzMzMxswVWDqRZTTWYyh5ru5+C3j8zMzMzMzMzMbLlVk5nMoWY/3qS53r7GNwAAAAAspRpMtZhqMpM51EwVBwAAAIB1PPcYoQYAAABgI0INAAAAQAihBgAAACCEUAMAAAAQQqgBAAAACCHUAAAAAIQQagAAAABCCDUAAAAAIYQaAAAAgBBCDQAAAEAIoQYAAAAghFADAAAAEEKoAQAAAAgh1AAAAACEEGoAAAAAQgg1AAAAACGEGgAAAIAQQg0AAABACKEGAAAAIIRQAwAAABBCqAEAAAAIIdQAAAAAhBBqAAAAAEIINQAAAAAhhBoAAACAEEINAAAAQAihBgAAACCEUAMAAAAQQqgBAAAACCHUAAAAAIQQagAAAABCCDUAAAAAIYQaAAAAgBBCDQAAAEAIoQYAAAAghFADAAAAEEKoAQAAAAgh1AAAAACEEGoAAAAAQgg1AAAAACGEGgAAAIAQQg0AAABACKEGAAAAIIRQAwAAABBCqAEAAAAIIdQAAAAAhBBqAAAAAEIINQAAAAAhhBoAAACAEEINAAAAQAihBgAAACCEUAMAAAAQQqgBAAAACCHUAAAAAIQQagAAAABCCDUAAAAAIYQaAAAAgI3tdrv7U6gBAAAA2NAUaYpQAwAAALCRx0hThBoAAACADTxHmiLUAAAAAKzsOdL4Rw0AAADABl5FmiLUAAAAAKzkr0hThBoAAACAFfwXacrLULM/dveD6+1rfAMAAADAUqrBVIupJjOZQ013vswVx8zMzMzMzMzM1lk1mckcavp+uB8cxps1ZmZmZmZmZma23KrBnM6X1g/DWGceQg0AAAAA2xJqAAAAAEIINQAAAAARWvsG8PlrAcgiXM8AAAAASUVORK5CYII=" InformativeScreenshot="f1b20a760611e3f6adf35dfd8e78a5b4.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Autodoc - GDFor | Colaborador' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="715, 739, 74, 18" ElementType="Text" FriendlyName="'Observações'" FullSelectorArgument="&lt;webctrl aaname='Observações' parentid='user-profile' tag='LABEL' /&gt;" FuzzyAccuracy="0.66" FuzzySelectorArgument="&lt;webctrl aaname='Observações' parentid='user-profile' tag='LABEL' check:innerText='Observações' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE4AAAAWCAYAAABud6qHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAH8SURBVFhH7ZXBjcIwEEW3FfqgiLSQCmiAI4cUkHu40gRneqAGrly9ehEffSYOSN5ltUF+koU9tmfG3+PwlSpFVOEKqcIVUoUrpApXSBWukIlw5/M5rdfrtFqtxkYfm6C/3W7T9Xq9Wf4/p9NpPMvhcEiXyyUdj8fbTDkPwiFK0zQTody2ROH2+/0oGMLFQijlQbiu60bnEWzMwRKFewd34RACQXK34WLR32w2qW3b+3N2senLTuOZAPv0CfBbpxK4lGEYxrndbjfJw+OzVr5znxHFoCm2nmq0Az45j+Z0lmjn1ZGruAuHETE8EYGNOdbQ96erACQjEbA52FmjwD6m4c/Fx5cqHOj7YYWvw08uf8b+QuK66FtjmucUKao4TwQIoCAE9psDktDNqalaXEThtjiPX/cj4VxEx3MTEgefXJr7o7Fec7Gqxa9843LJMSYJ3V7uUBCFEezXXvmOfnw8FyOXG+tYPxfb4ZysmX2qgCj+DCHa4vhZpSppAs59BuaSZy12mvbhy8Whr/EzP37RMRf2R2EjuTM+CAc4RhiVbVSazQQjSS9teLaXff7hZj8JMZ87sG5a6yD65w+l7/txDmIMqgr4lS0+PcWJ876H5hcGE+GWDod2Md/FxwkHVMur5/dTPko4f3Z6pu/iIyvuL6jCFVKFK6QKV0RK35pLIVq+ab9jAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </uix:NTypeInto.Text>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <Sequence sap2010:Annotation.AnnotationText="Desmarca todas as obras que estão marcadas" DisplayName="Sequence - Limpa Obras" sap:VirtualizedContainerService.HintSize="604,1606" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="listChildrenObras" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:FindChildren sap2010:Annotation.AnnotationText="Pega os descendentes com type = &quot;checkbox&quot;" Children="[listChildrenObras]" DisplayName="Find Children - Obras" Filter="&lt;webctrl type='checkbox'/&gt;" sap:VirtualizedContainerService.HintSize="562,137" sap2010:WorkflowViewState.IdRef="FindChildren_2" Scope="FIND_DESCENDANTS">
+                <ui:FindChildren.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="47e97f5c-f313-4c45-a467-e88e744047b3" InformativeScreenshot="1f34c08a343eac415e0db0d8751506b6" Selector="&lt;html app='chrome.exe' title='Autodoc - GDFor | Colaborador' /&gt;&lt;webctrl id='div-obras' tag='DIV' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:FindChildren.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:FindChildren>
+              <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Passa por cada obra pra verificar se o checkbox esta marcado.&#xA;Caso encontre algum que esteja, ele desmarca" DisplayName="For Each - Desmarca checkbox" sap:VirtualizedContainerService.HintSize="562,1304" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[listChildrenObras]">
+                <ui:ForEach.Body>
+                  <ActivityAction x:TypeArguments="ui:UiElement">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:UiElement" Name="uiElementObra" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,1137" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="listChildrenOfChildrenObras" />
+                        <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="listChildrenOfChildrenOfChildrenOfChildrenObras" />
+                        <Variable x:TypeArguments="x:String" Name="strAttributeText" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NGetAttribute Attribute="text" DelayBefore="0.1" DisplayName="Get Attribute - Coleta Atributo &quot;text&quot;" sap:VirtualizedContainerService.HintSize="484,186" sap2010:WorkflowViewState.IdRef="NGetAttribute_1" InUiElement="[uiElementObra]" Version="V1">
+                        <uix:NGetAttribute.Result>
+                          <OutArgument x:TypeArguments="x:String">[strAttributeText]</OutArgument>
+                        </uix:NGetAttribute.Result>
+                      </uix:NGetAttribute>
+                      <If sap2010:Annotation.AnnotationText="Se o checkbox tiver o atributo text igual a &quot;checked&quot;, significa que ele está flagado, neste caso, o robô clica novamente para que ele desative" Condition="[strAttributeText.Trim = &quot;checked&quot;]" DisplayName="If - Verifica se o checkbox está ativo" sap:VirtualizedContainerService.HintSize="484,817" sap2010:WorkflowViewState.IdRef="If_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <If.Then>
+                          <Sequence DisplayName="Sequence - obra marcada" sap:VirtualizedContainerService.HintSize="376,587" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="strAttributeAaname" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NGetAttribute Attribute="aaname" DisplayName="Get Attribute - Coleta Atributo &quot;aaname&quot;" sap:VirtualizedContainerService.HintSize="334,186" sap2010:WorkflowViewState.IdRef="NGetAttribute_3" InUiElement="[uiElementObra]" Version="V1">
+                              <uix:NGetAttribute.Result>
+                                <OutArgument x:TypeArguments="x:String">[strAttributeAaname]</OutArgument>
+                              </uix:NGetAttribute.Result>
+                            </uix:NGetAttribute>
+                            <ui:LogMessage DisplayName="Log Message - Aviso obra marcada" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Obra &quot; + strAttributeAaname.Trim + &quot; já estava marcada no GD4. Desmarcando...&quot;]" />
+                            <uix:NClick ClickType="Single" DisplayName="Click - Obra marcada" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="NClick_2" InUiElement="[uiElementObra]" KeyModifiers="None" MouseButton="Left" Version="V1" />
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_6">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEach.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:ForEach>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" ContentHash="L3wu_QckiUuX6q3uz2n_Tg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAALzSURBVDhPTZJJT1NhGIXfBBpZERVKob23LZQylfoDXDjFGL7hYljwawyJQ1wY2ZhotIgTigoyyCiDA6AIKIgDgyKDvTiFxAFXRgqv52qJfslZ3ifPe86lzTdZoGkyrNNeFury6SLdNFOs9y+UaHMxoufflVq2HbWuvo9aBz5GrS0folbyK7yxPElj+RpR3vGwPg3Qd0DWXxXpirliy5gr0fZCxOKlUosB+bIctaoBykLoww5N9DBP0VCu8j0OqY7RfMVPw5qfFegEQBUzRdqAif2mRPNbZBGgeKm1AVAzQB6EqC8g0x7kqrNDeYofhRSPAPIkrH8CpGBiIDZO4tlizbDhpM0GQNV2RLuoNyDL+4Pq2/1cxYOAwOg7bKpgkz4R1gHY2C8KNeMkhg07NvORPzYrSxG9j7r8svGOX3FfQPG9oErA5tBoSKWgE6eXIGzsiQLNOIlhw47N66TNfImupTZDLneYkrsB6Q2oqf6A9CE0HFJOgrCxUfJmN+zYTCVtAJqjZp9cazUktwPSacqGHr9I6TYlDWGdwTxp4qQRgGycFAckDpv480Idx0lx2ExTg1f+uuWV3OKTfNuQje2GSG0zBA3kSiep6MUHiB8mfpxkjhdo73ME53hh4qX6bLl0I0dyIyBNPjkDIxNJ/iX/HlZysh2wg4BVAlYJo31U5xGXr2ZLvg4IbNYBOgKjVCT5KdHdoCIUnYKlDsMogbk3nLkBidGlLLH/skes1Hkkw4Zv5shVgI4BEMRZLnSTipJ9AFT1BdUqluIBTA6TT+hmF9W6peuCW5y8mCU2rngEX/trkwBkHpB2QJqx1AwKXnPmxlIMo3XMfXw4pFOoxi2oJlO4z7tF/YUssQ4b/s+GnYLRiVMwO3Pjv0n0BFQdpt6Ov5jo1NY9FMsUTjIAO1HrFiuw4U0bp2DYOAUz5v7cbsijXabc1mkq6kzfm2wJL5ZZRucyylyw2Q1IDJBZ2PxAwV9x0iwgZwDZ2eoVrhavSH5F9BudtKoV0nmxngAAAABJRU5ErkJggg==" InformativeScreenshot="182f780fe03c9a8d084b5728c8395fac.png" Reference="dLzBtWiWl0Cuc9sJblPtmg/eBvReatHLk-SwKhmmYDCMA" Selector="&lt;html app='chrome.exe' title='Autodoc - GDFor*' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

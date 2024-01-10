@@ -1,0 +1,406 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="CadastroGD4_Repetido" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_strPIS" Type="InArgument(x:String)" />
+    <x:Property Name="in_strFuncao" Type="InArgument(x:String)" />
+    <x:Property Name="in_strDataAdmissao" Type="InArgument(x:String)" />
+    <x:Property Name="in_strObra" Type="InArgument(x:String)" />
+    <x:Property Name="in_strNumeroRegistro" Type="InArgument(x:String)" />
+    <x:Property Name="in_strEmpresa" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1283,1762</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>CadastroGD4_Repetido_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Entrada:&#xA;Dados de contratação do colaborador&#xA;&#xA;Processamento:&#xA;Realiza o preenchimento de todos os campos de contratação no GD4&#xA;&#xA;" DisplayName="CadastroGD4_DadosContratacao" sap:VirtualizedContainerService.HintSize="552,1697" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome GD4" sap:VirtualizedContainerService.HintSize="510,1488" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="84031252-efa3-4ec7-952d-0aa600d45067" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Sequence - Dados de Contratação" sap:VirtualizedContainerService.HintSize="476,1272" sap2010:WorkflowViewState.IdRef="Sequence_15">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If Condition="[String.IsNullOrEmpty(in_strPIS.Trim)]" DisplayName="If - Preenche PIS" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="If_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap2010:Annotation.AnnotationText="Caso o PIS esteja vazio, o robô deve clicar em &quot;SIM&quot; na opção &quot;Primeiro emprego&quot;" DisplayName="Sequence - PIS vazio" sap:VirtualizedContainerService.HintSize="376,292" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" DisplayName="Click - Primeiro Emprego - Sim" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="84031252-efa3-4ec7-952d-0aa600d45067" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://gd4.autodoc.com.br/dashboard/empresa/colaborador/form" DesignTimeRectangle="717, 606, 61, 23" ElementType="Text" FriendlyName="'Primeiro Emprego - Nao'" FullSelectorArgument="&lt;webctrl aaname='*Sim*' parentid='user-profile' tag='LABEL' /&gt;" FuzzyAccuracy="0.65" FuzzySelectorArgument="&lt;webctrl aaname='*Sim*' parentid='user-profile' tag='LABEL' check:innerText='Sim' /&gt;" Guid="d0d8c3cb-3afd-4def-86ca-aa39161019ba" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAAbCAYAAAAj4uLUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAHUSURBVFhH7ZeLbYMwEIa7CnswRFbIBCzAAKySTdghA7RSSto0Cc2j4sKHOGpSSISlQKD+pBN+S/f7zjYv4hAnQs5dEQ7Hk2z335J8fsnb+0dhlGmjbwq0inA+/8hqvZHX1fqmMYaxY6ZRhO0+rTlJ/Xg6S5ZlhVGmzRSJyBgrf0QwBdjs9mVrMwjCGB2/Sw9lz7ioiUBYq0Nd8p2xOs8mNZIkkdlsJp7nFeb7viyXy7L38dRE0PC+FwFNaESwRhfSNJUgCCSO47LlF8SZz+cPF6QSQXezqxMKqaEidomivhy9RSWCngV8bbFdI4qiIhqIChMEop0vxrgwDKu0WSwWRZvWKdtQicDdjwOc/LYwlzVYqyukA45wNuAwXItAn6ZNU902oioReAThAGFtC3NZg7VswQmc43stgpaBqGHnzTpRMgkRAOfY4d5FGDodFJzSsDYdN8vwEBGGOhhxwnwjYGae9yqCeUXapARzbK7IZ6ASAdSJPh9Lz0BNhKGezUNTEwE0rzF291Zq0KcRgE3iB0oxhSC8+U3m5MdpjDJtmj5jFgAaRQDC2nSyzRgzxhQwaRVBId+JDO5+HkEYZdrGdgu0cVeE/4ATIceJkONEyHEiiMgFD7rNYw6qm4cAAAAASUVORK5CYII=" InformativeScreenshot="75b884d812f93e51e7a6d6f9fa7a89b5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Autodoc - GDFor | Colaborador' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="715, 572, 111, 18" ElementType="Text" FriendlyName="'Primeiro Emprego - Nao'" FullSelectorArgument="&lt;webctrl aaname='Primeiro Emprego*' parentid='user-profile' tag='LABEL' /&gt;" FuzzyAccuracy="0.68" FuzzySelectorArgument="&lt;webctrl aaname='Primeiro Emprego*' parentid='user-profile' tag='LABEL' check:innerText='Primeiro Emprego*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHMAAAAWCAYAAADzeqMPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAJQSURBVGhD7ZbNkcIwDIW3FfqgCFqgAhqgAArgzpkCuHKmB2rgyjU7X4a3+xCK+d1l8Pib8RA7kizpxQlfXaMampgV0cSsiCZmRTQxK6KJWRFnYq7X6240Gv2MyWTSHQ6H093PY7fbndXDoMZP5ng8dvP5vNvv96eVXy7E9GJpxmw26wNkEHA6nb5UcGIRM0v2Xsh/sVicZnWAFtSU9bwo5l+I9Z/UJCZajMfjizcNNYqrJ1PNYH2z2fSvXoISnMGR52nhGltOsjbabrdn8/igKDnFAx4cfPhlEHO1WvV2ysV9Y1ynJCY+xFUc6sI+yymrzfdcLpd9b/DRp4meDNkTS+saEoXfbF0ob/XdKX4zSUYO3IvfUIp0MbnvDYhznXKGBAOfx2tieCP8PqhpsWiIjXGBiImf1xfn/vB4LXFPCS1fYM1z0pwR95Ed8V0kavRPjvsST/mJ4sl0snu+eZYIm/mcRPglKW+yN9rt/FrgG4sYyjuzFdEH2ziXb6wN3B877AX5In6sEXvsopiK49cixi7xNjGHmux2fi0y36G8S/tEH2zjXL6PiBnzdrCXwEPCihi7xFvEZAz9Y412sSlxjfjMs4JdkEisB9s4ly95xtcstWqeNZy12C/IahJZD+/5Z/8WMQF7/dnwJ9Ttoo+IvpmQwLpsNFRDrOeamORBY2McyMSkFnxk799r7LXO0D7gObvPLZyJ2cihof6gPkMUnph+yp+hiXkDrxIzE27o7fMITcwbeOXJJJZ/Iu59lZZoYlZEE7MimpgV0cSshq77BsVeOOum77ExAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:Annotation.AnnotationText="Caso o PIS esteja preenchido, o robô deve clicar em &quot;NÃO&quot; na opção &quot;Primeiro emprego&quot; e depois deve digitar o PIS no campo seguinte" DisplayName="Sequence - PIS Preenchido" sap:VirtualizedContainerService.HintSize="376,563" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" DisplayName="Click - Primeiro Emprego - Não" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="84031252-efa3-4ec7-952d-0aa600d45067" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://gd4.autodoc.com.br/dashboard/empresa/colaborador/form" ContentHash="9RgR4AtKPkKf9gBmQWnK8g" DesignTimeRectangle="717, 622, 63, 23" ElementType="Text" FriendlyName="'Primeiro Emprego - Nao'" FullSelectorArgument="&lt;webctrl aaname='*Não*' parentid='user-profile' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='*Não*' parentid='user-profile' tag='LABEL' check:innerText='Não' /&gt;" Guid="d0d8c3cb-3afd-4def-86ca-aa39161019ba" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAAbCAYAAAAnFzLpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAALgSURBVFhH7ZexbhNBEIYRPAG8gR8BajcQOkCYJ7BcJZ2hdwGdSwq/hBugsYAIYgQUlhKRJg1yiwghstJEd3awM9y39pzmLnexLziIM/dJo9vbnT1p/p2d3bsiBSGFGIa5Yrz8NpZneydyZ8uXGy+OndGm71UwtkqkirF7NJFbbz251j4+1/DBdxVIFOPp3igM9uYbz713D8ZydCLOaNPHmPqRKXnnjBhWiMdfRrPeZBAGH/V//jXfgkTEIN01MGqFZXwqcuCfOqNtwVfnXWTLtNttqVQqMhgMZj1TWq2W9Pt912YMn3q9Lp7nSafTcc9lEhFD0z6eEZv7Y1nfHsmjz0NntN/9iIqlGUINyQpiVKtV97RYMXq9njPey+XyGd9lEIqhq4sgls7+RO52Pbk6W3mM9oOPvrz+/mvmNd0yKmY8q+ZBYKx0rVYLgwcrxt8gFENrBU+FjFjbSj9REOR9UEyVpG8sAmJgrLxuA7BiaEaUSiVnzWbT9QP+zNMx+40shGLcngXNSQHUhfXtYSQj4sbYRuCjNYS59POtLKgYQJDaTssMAm00GuEYcxBSYb4Va1FCMa4HlykCId2BQkl9sMEn2cNPvhwOp2owlz4uZlmwYhAg24WCmVRAdfXJEsboJxNs8aUfsbJmx6WIwbeyYMUAXVkVI54J9v1SxEjcJjsLbJOd0VK3CRAEAdrVt8WVJ1mi70vfJknFj+NzretHBLB2LyigKh78aQG1EJyKAYzbAkmwOqbi6fhFhIBQDD1auSfoVgGOz/tB0DZDaCPEZnDsKszRf5msR+u/QigGpF26OD45WagP2EawfWxGgF664veUPBERY951nEKJaY1QNKuwPP/BRsQA3ffYk91RZMvEYQwf9V+pHzXFCkId4Pf8w8+JCx6jTZ/WiFUQAhLFANJda8h5hk+et4YlVQyFekCmcHfgMoXRpi+vp0Yac8X4nyjEMBRiGAoxDIUYISK/ATP/pUnnOb8rAAAAAElFTkSuQmCC" InformativeScreenshot="db6fbb5cc8062ef56f34c6f5ba53063f.png" Reference="dLzBtWiWl0Cuc9sJblPtmg/NR1WDEZFjkifd3lvJkEBeQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Autodoc - GDFor | Colaborador' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="715, 558, 111, 18" ElementType="Text" FriendlyName="'Primeiro Emprego - Nao'" FullSelectorArgument="&lt;webctrl aaname='Primeiro Emprego*' parentid='user-profile' tag='LABEL' /&gt;" FuzzyAccuracy="0.68" FuzzySelectorArgument="&lt;webctrl aaname='Primeiro Emprego*' parentid='user-profile' tag='LABEL' check:innerText='Primeiro Emprego*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHMAAAAWCAYAAADzeqMPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAJQSURBVGhD7ZbNkcIwDIW3FfqgCFqgAhqgAArgzpkCuHKmB2rgyjU7X4a3+xCK+d1l8Pib8RA7kizpxQlfXaMampgV0cSsiCZmRTQxK6KJWRFnYq7X6240Gv2MyWTSHQ6H093PY7fbndXDoMZP5ng8dvP5vNvv96eVXy7E9GJpxmw26wNkEHA6nb5UcGIRM0v2Xsh/sVicZnWAFtSU9bwo5l+I9Z/UJCZajMfjizcNNYqrJ1PNYH2z2fSvXoISnMGR52nhGltOsjbabrdn8/igKDnFAx4cfPhlEHO1WvV2ysV9Y1ynJCY+xFUc6sI+yymrzfdcLpd9b/DRp4meDNkTS+saEoXfbF0ob/XdKX4zSUYO3IvfUIp0MbnvDYhznXKGBAOfx2tieCP8PqhpsWiIjXGBiImf1xfn/vB4LXFPCS1fYM1z0pwR95Ed8V0kavRPjvsST/mJ4sl0snu+eZYIm/mcRPglKW+yN9rt/FrgG4sYyjuzFdEH2ziXb6wN3B877AX5In6sEXvsopiK49cixi7xNjGHmux2fi0y36G8S/tEH2zjXL6PiBnzdrCXwEPCihi7xFvEZAz9Y412sSlxjfjMs4JdkEisB9s4ly95xtcstWqeNZy12C/IahJZD+/5Z/8WMQF7/dnwJ9Ttoo+IvpmQwLpsNFRDrOeamORBY2McyMSkFnxk799r7LXO0D7gObvPLZyJ2cihof6gPkMUnph+yp+hiXkDrxIzE27o7fMITcwbeOXJJJZ/Iu59lZZoYlZEE7MimpgV0cSshq77BsVeOOum77ExAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into - PIS" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_15" InteractionMode="Simulate" ScopeIdentifier="84031252-efa3-4ec7-952d-0aa600d45067" Text="[in_strPIS]" Version="V1">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://gd4.autodoc.com.br/dashboard/empresa/colaborador/form" ContentHash="9DoGsugaE02Ez0SVRaXmTA" DesignTimeRectangle="1286, 580, 555, 34" ElementType="InputBox" FriendlyName="'PIS'" FullSelectorArgument="&lt;webctrl id='pis' tag='INPUT' type='text' aaname='PIS*' /&gt;" FuzzyAccuracy="0.66" FuzzySelectorArgument="&lt;webctrl id='pis' tag='INPUT' type='text' aaname='PIS*' /&gt;" Guid="97679f7f-1ef5-4be0-9d77-e1464c2ee7cf" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAi8AAAAmCAYAAAAMRHulAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAFASURBVHhe7djBagIxGIXRvv+LVql0RNyozER/mYRS2vXMhXPgbhKy/8hHAwAIIl4AgCgjXuZ5aefLtR1PU/v8+jYzMzPbfNUl1SfVKd2Il+l18dcjMzMzs61XndKNeDmsPy63+2M9AQDYVnVJ9Ul1SjfipZcNAMCe/G4U8QIA7Jp4AQCiiBcAIIp4AQCiiBcAIIp4AQCiiBcAIIp4AQCiiBcAIIp4AQCiiBcAIIp4AQCiiBcAIIp4AQCiiBcAIIp4AQCiiBcAIIp4AQCiiBcAIIp4AQCiiBcAIIp4AQCiiBcAIIp4AQCiiBcAIIp4AQCiiBcAIMq/8XI4Te+L2/2xngAAbKu6pPqkOqUb8TJdrqNszMzMzPa06pRuxMs8L++L4/oDY2ZmZrb1qkvOrz6Zl2Utlh/xAgCQQLwAAEFaewJvxYMplL9ucAAAAABJRU5ErkJggg==" InformativeScreenshot="836ad37e0b0e9acad721028a8987f646.png" IsResponsive="True" Reference="dLzBtWiWl0Cuc9sJblPtmg/c3htq2LXWEeCvsBpfwyr9w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Autodoc - GDFor | Colaborador' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="1286, 558, 27, 18" ElementType="Text" FriendlyName="'PIS'" FullSelectorArgument="&lt;webctrl aaname='PIS*' tag='LABEL' /&gt;" FuzzyAccuracy="0.68" FuzzySelectorArgument="&lt;webctrl aaname='PIS*' tag='LABEL' check:innerText='PIS*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB8AAAAWCAYAAAA4oUfxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAADNSURBVEhL7ZTRDYQgEESvFTuiBSqgAQqgFTqhB2vgl9+9DHHNyBn0EiM/vISIwuzsLsSPDGSaD2GaV2KMsizLPowxknOuayklCSHUOcA773XOSSllWz3SapUfcwwFIg3KAdZ1FWvtntgV0HJcpWvOJmzOSfXAfu5O26HLytlQ50gGR3JWTQv2Que9rzGY7plzlmyuaGXtdwVaxIAWXUTCeCrdypkzcwWaO8fQ8og5WgvzuxdQecQca69VjjnfDf4f/MPB/G2m+RCm+QBEvqdiHIyk4+wcAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                </Sequence>
+              </If.Else>
+            </If>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBefore="0.5" DisplayName="Type Into - Data Admissão" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="NTypeInto_16" InteractionMode="HardwareEvents" ScopeIdentifier="84031252-efa3-4ec7-952d-0aa600d45067" Text="[in_strDataAdmissao + &quot;[k(enter)]&quot;]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://gd4.autodoc.com.br/dashboard/empresa/colaborador/form" ContentHash="MrEbASkZEEeavURVmNDleg" DesignTimeRectangle="1325, 677, 516, 34" ElementType="InputBox" FriendlyName="'Data Admissão'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='Data Admissão*' /&gt;" FuzzyAccuracy="0.58" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='Data Admissão*' /&gt;" Guid="783fc805-b33b-4657-bb0c-6c0ee5fd8dd6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAggAAAAmCAYAAAChxWMMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAEHSURBVHhe7dlRCoJAGIXR9r/RiqQR8SVFJ4kxyrsEz4H78s8GPphLBQA4EAgAQLhcH89qZmZm5929K7Ufxrosa8sDgWBmZmZtZYuE3feLYX8EAM7lNc2fBrh1pV0EAgCwOXaAQAAABAIAkAQCABAEAgAQBAIAEAQCABAEAgAQBAIAEAQCABAEAgAQBAIAEAQCABAEAgAQBAIAEAQCABAEAgAQBAIAEAQCABAEAgAQBAIAEAQCABAEAgAQBAIAEAQCABAEAgAQBAIAEAQCABAEAgDw5zXNnwa4daVdtkDYw8DMzMzOvTKMLQ8EgpmZ2el370rttzhY1rXlwc8XAwDATiAAAAe1vgHuy5OHJ5guxQAAAABJRU5ErkJggg==" InformativeScreenshot="a283d10aaffe52a4826dcfa30884d3c1.png" Reference="dLzBtWiWl0Cuc9sJblPtmg/GQFBsk4xukWfiZEn42B-iQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Autodoc - GDFor | Colaborador' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1286, 655, 96, 18" ElementType="Text" FriendlyName="'Data Admissão'" FullSelectorArgument="&lt;webctrl aaname='Data Admissão*' tag='LABEL' /&gt;" FuzzyAccuracy="0.62" FuzzySelectorArgument="&lt;webctrl aaname='Data Admissão*' tag='LABEL' check:innerText='Data Admissão *' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGQAAAAWCAYAAAA2CDmeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAJCSURBVGhD7ZbNjcIwFIS3FfqgCDpAVEADFEAB3DlTAD3QA7TAlWtWH2JWw5AEws/igz8pSvwcP4/n2YGfplIUtSCFUQtSGLUghVELUhi1IIVxVZDNZtOMRqOra7fbXXo/D/PP5/PmdDpdIu0sl8t/1QXH47GZTCZ/+rbb7V2dXez3+2axWLSOvykIl2AAAjz2KZgLkdPp9Cy4j2cLQt7ZbHY2dyjMx0WO8Xj8kifkWK1Wl9Y1vQWBRxeBoev1+qVdg8g2Dck3Tsg7YF35BeLUubd3C6Kdi2GAGUrGTiGu46y4jjWmKcbVZ7RMJhfPXljPo8+GCkJONgJa1E+f2tII3PWp6NLcFWescnKhUdDPezmmDeKM1eZL7hYEZFZCTMLajHToRyj3JPsQKxOzj7tMB/S6AW1tafSCEG9bU1fcYXxuUh/jcybE6c91iMEnhH7tBN8pTMCzjIDcVQiQsQ6iPCeX8tKXi6OthaRm4tnWeC+ItKWmrrgMlD6dPOK50XyeoQz6DUlzvE0/zxKRQrPt+IkAfzfnBNrE4dmCCObAaD9V4HGefVPyntquVbTN8yi9BZEoxbi7OTyrncIQ5X8GMCZ3HXSJl+mZhzt53lUQIGeaCoofDoezBsYDdzSoLa0ifRrCTUH8s6FjKWSG+vkx9b9viCDOIli02lwYQTsXnYYKN5Jn5WF+5pQBOZ54tpXHC8I7ysmlMY/EWR855Q35iKlf8z3DVUEq36cWpDBqQQqjFqQwakEKoxakMGpBiqJpfgEIuFnJBuvvRQAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBefore="0.5" DisplayName="Type Into - Numero Registro" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="NTypeInto_17" InteractionMode="Simulate" ScopeIdentifier="84031252-efa3-4ec7-952d-0aa600d45067" Text="[in_strNumeroRegistro]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://gd4.autodoc.com.br/dashboard/empresa/colaborador/form" ContentHash="69iqJLtQh0SUDzk0Ed2oLw" DesignTimeRectangle="1286, 856, 555, 34" ElementType="InputBox" FriendlyName="'Numero Registro'" FullSelectorArgument="&lt;webctrl id='numero_registro' tag='INPUT' type='number' aaname='Número do Registro *' /&gt;" FuzzyAccuracy="0.66" FuzzySelectorArgument="&lt;webctrl id='numero_registro' tag='INPUT' type='number' aaname='Número do Registro *' /&gt;" Guid="b7ec8160-23e5-4c0a-8e22-cfa85e23216b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAi8AAAAmCAYAAAAMRHulAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAFASURBVHhe7djBagIxGIXRvv+LVql0RNyozER/mYRS2vXMhXPgbhKy/8hHAwAIIl4AgCgjXuZ5aefLtR1PU/v8+jYzMzPbfNUl1SfVKd2Il+l18dcjMzMzs61XndKNeDmsPy63+2M9AQDYVnVJ9Ul1SjfipZcNAMCe/G4U8QIA7Jp4AQCiiBcAIIp4AQCiiBcAIIp4AQCiiBcAIIp4AQCiiBcAIIp4AQCiiBcAIIp4AQCiiBcAIIp4AQCiiBcAIIp4AQCiiBcAIIp4AQCiiBcAIIp4AQCiiBcAIIp4AQCiiBcAIIp4AQCiiBcAIIp4AQCiiBcAIMq/8XI4Te+L2/2xngAAbKu6pPqkOqUb8TJdrqNszMzMzPa06pRuxMs8L++L4/oDY2ZmZrb1qkvOrz6Zl2Utlh/xAgCQQLwAAEFaewJvxYMplL9ucAAAAABJRU5ErkJggg==" InformativeScreenshot="62251b153c81820d07445e3bbad86ad9.png" IsResponsive="True" Reference="dLzBtWiWl0Cuc9sJblPtmg/vISP6WmcBUaiargJbP4tkw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Autodoc - GDFor | Colaborador' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1286, 833, 125, 18" ElementType="Text" FriendlyName="'Numero Registro'" FullSelectorArgument="&lt;webctrl aaname='Número do Registro*' tag='LABEL' /&gt;" FuzzyAccuracy="0.63" FuzzySelectorArgument="&lt;webctrl aaname='Número do Registro*' tag='LABEL' check:innerText='Número do Registro*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIEAAAAWCAYAAADnw/+rAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAALYSURBVGhD7ZYxjhMxGIW5Ss7ARXIMulwgok7HASioI1FQQkkXqJAoQIq2QIJiJSJWAgWBkMx+yT7yxvNPvKNNsruMn/SUscf+/+ffz548SBWDRzVBxc4ED59U/q8soZpgACyhmmAALKGaYAAsoWGCN59S+vErpccvm0E+nKf0dNHsg2dft8z77xofPU/p80W8hn2kDtTDQY2isXeZwmKxSLPZ7Kq1Q8sEFz/bC41MwJj7UpCbmOD8++5QEIf2i/ftsdclGr6t2wftmBQwwXw+v2rt0DLB67OtSC9Y101wX3goE0BuvmObH73vvmx/o/d9yekfjUYNTiaTtF5fbvQlWiaAOJ3FS4SbgCL4SeBZnwTG8Mxc4dXHZtsLqJMl6B1FJw6FAB7/959tH9i3GbwTMDV5tIY8L89RwXMTMMbN1KUfojkHtWIuMZhLXP/cEOvZ27jvJvUAq9VqY4bpdLq5ERyhCXgmkZ77mIAFaGzU9qswj6W2iuOLijaEts8XyaNCq+068rzk0Rqc+SZRcMWAXfoh2pSf+Brn2rzfSV5iaf5N68GJ5+Sz+cvlMo3H482v0GkCxGrD+pjAix8tRsKhF1ggv4+L8oiud18/+XWCo9i5btHHQv9M0u7Sj1bmKZ7r8Vw8YyziuB6eu+qmMX3qUUKnCdQm0bFMkC9MjN7dtgloqx7Ru5yMExin2FEuYmAEjaPdVTfNOZkJEEFyvwZJ7CagLTF9TKC5keho0XmftLkWkT7eKS+6KHLXGtCgNTijnDIT7T76xbxGos/J5+ftqG9fPUrYawJIUDcBv/5nhD8r3BR618cEEi4oTz5OzHNHCxZZh0AsdGgNed7IADDS4Qbr0s84YjqUw2vkGoHXXvOJzx/DXIdiXaceJTRMUHkYsoG+IWy43yCnZgnVBAdmtOFdN9upWEI1wRGYX9P+mbgNllBNMACWUE0wAJbwzwQVw0U1weCR0l9fRXro//sctQAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <TryCatch sap2010:Annotation.AnnotationText="Realiza a tentativa de selecionar a empresa desejada no GD4, caso gere um erro, o robô lança uma business avisando a área" DisplayName="Try Catch -  Responsavel Colaborador" sap:VirtualizedContainerService.HintSize="434,138" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <TryCatch.Try>
+                <uix:NSelectItem sap2010:Annotation.AnnotationText="Pesquisa pelo CNPJ da empresa responsável" DelayBefore="0.5" DisplayName="Select Item - Responsavel Colaborador" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="NSelectItem_5" Item="[&quot;*&quot; + in_strEmpresa]" ScopeIdentifier="84031252-efa3-4ec7-952d-0aa600d45067" Version="V1">
+                  <uix:NSelectItem.Items>
+                    <scg:List x:TypeArguments="x:String" Capacity="50">
+                      <x:String>MITRE REALTY | CNPJ: 07.882.930/0001-65</x:String>
+                      <x:String>4M SAS | CNPJ: 13.660.632/0001-23</x:String>
+                      <x:String>A &amp; D PERFURACAO | CNPJ: 10.812.991/0001-60</x:String>
+                      <x:String>A Janela | CNPJ: 61.310.108/0001-75</x:String>
+                      <x:String>A.A. MACEDO PRESTAÇÃO DE SERVIÇOS ELÉTRICOS | CNPJ: 37.657.048/0001-87</x:String>
+                      <x:String>AA OLIVEIRA | CNPJ: 21.545.427/0001-45</x:String>
+                      <x:String>ABN PORTAS E COMPENSADOS II | CNPJ: 34.307.861/0001-39</x:String>
+                      <x:String>ACO FERRO PORTOES | CNPJ: 10.717.125/0001-90</x:String>
+                      <x:String>ACQUAGAMA | CNPJ: 18.663.016/0001-40</x:String>
+                      <x:String>ACS GERADORES | CNPJ: 33.599.505/0001-73</x:String>
+                      <x:String>ADILLUI MONTAGEM DE ELEVADORES | CNPJ: 05.786.743/0001-52</x:String>
+                      <x:String>ADS ESQUADRIAS | CNPJ: 15.191.488/0001-59</x:String>
+                      <x:String>ADVCOMM COMUNICACAO VISUAL EIRELI | CNPJ: 09.394.124/0001-73</x:String>
+                      <x:String>AEROMOVEIS | CNPJ: 09.444.942/0001-33</x:String>
+                      <x:String>AGK Ar Condicionado | CNPJ: 19.786.935/0001-73</x:String>
+                      <x:String>AGOS | CNPJ: 04.113.492/0001-82</x:String>
+                      <x:String>AGRICOLA CENTRO OESTE | CNPJ: 42.652.984/0001-35</x:String>
+                      <x:String>AGRICOLA DIAMANTE | CNPJ: 09.441.180/0001-11</x:String>
+                      <x:String>AGRIPLAN GEOREFERENCIAMENTO | CNPJ: 35.659.683/0001-78</x:String>
+                      <x:String>AGS SEGURANÇA DO TRABALHO | CNPJ: 33.694.537/0001-58</x:String>
+                      <x:String>AGUIA MONITORAMENTO | CNPJ: 31.717.688/0001-59</x:String>
+                      <x:String>AJF | CNPJ: 22.247.592/0001-83</x:String>
+                      <x:String>ALANO | CNPJ: 47.084.728/0001-02</x:String>
+                      <x:String>ALF | CNPJ: 15.501.742/0001-78</x:String>
+                      <x:String>ALG INSTALAÇÕES DE ELEVADORES LTDA | CNPJ: 37.266.611/0001-96</x:String>
+                      <x:String>ALL RENTAL COMÉRCIO E LOCAÇÃO | CNPJ: 47.893.771/0001-19</x:String>
+                      <x:String>ALLPRIME COMERCIO E MONTAGEM DE ESQUADRIAS LTDA - ME | CNPJ: 21.804.466/0001-10</x:String>
+                      <x:String>ALO GESSO | CNPJ: 24.988.226/0001-00</x:String>
+                      <x:String>ALTIMA CONSTRUÇÕES ELÉTRICAS - EIRELLI | CNPJ: 30.134.031/0001-04</x:String>
+                      <x:String>ALTURA ANDAIMES | CNPJ: 06.131.442/0001-53</x:String>
+                      <x:String>ALUBOND | CNPJ: 72.998.453/0001-60</x:String>
+                      <x:String>ALUREVEST REVESTIMENTO EM ACM LTDA | CNPJ: 30.131.794/0001-93</x:String>
+                      <x:String>ALVIM GRILL | CNPJ: 12.539.171/0001-72</x:String>
+                      <x:String>AMARANTO LEAL | CNPJ: 11.268.377/0001-42</x:String>
+                      <x:String>ANDAIMETAL | CNPJ: 64.859.416/0001-42</x:String>
+                      <x:String>AQUECENORTE SISTEMAS DE AQUECIMENTO EIRELI | CNPJ: 05.387.103/0001-70</x:String>
+                      <x:String>ARAUJO &amp; ROCHA MONTAGEM DE ELEV LTDA ME | CNPJ: 12.391.200/0001-00</x:String>
+                      <x:String>ARIVALDO | CNPJ: 22.218.726/0001-38</x:String>
+                      <x:String>ARMANDI INSTALACOES E MONTAGENS EIRELI | CNPJ: 36.640.538/0001-08</x:String>
+                      <x:String>AROL ESTRUTURAS | CNPJ: 11.481.994/0001-21</x:String>
+                      <x:String>ARQUIVETRO COMERCIO | CNPJ: 01.644.904/0001-12</x:String>
+                      <x:String>ARTERRA | CNPJ: 55.295.125/0001-88</x:String>
+                      <x:String>ASSA ABLOY | CNPJ: 01.211.626/0007-03</x:String>
+                      <x:String>ASTEC ESQUADRIAS DE ALUMÍNIO EIRELI | CNPJ: 23.960.102/0001-54</x:String>
+                      <x:String>ATLAS SCHINDLER (0001-08) | CNPJ: 00.028.986/0001-08</x:String>
+                      <x:String>AVS MONTAGEM DE ELEVADORES LTDA ME | CNPJ: 14.908.469/0001-38</x:String>
+                      <x:String>Ac Industria Mecânica | CNPJ: 00.347.908/0001-76</x:String>
+                      <x:String>Adville Instalações Elétricas | CNPJ: 13.229.134/0001-20</x:String>
+                      <x:String>Agile | CNPJ: 10.779.116/0001-24</x:String>
+                      <x:String>Albertini Serviços de Arquitetura LTDA | CNPJ: 24.636.739/0001-52</x:String>
+                    </scg:List>
+                  </uix:NSelectItem.Items>
+                  <uix:NSelectItem.Target>
+                    <uix:TargetAnchorable BrowserURL="https://gd4.autodoc.com.br/dashboard/empresa/colaborador/form" ContentHash="UtD2E0zEwE6H3jxb-xDS5A" DesignTimeRectangle="715, 834, 555, 34" ElementType="DropDown" FriendlyName="'Responsavel Colaborador'" FullSelectorArgument="&lt;webctrl tag='SELECT' aaname='Responsável pelo Colaborador*' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' aaname='Responsável pelo Colaborador*' /&gt;" Guid="8277a1f1-54cc-4653-8694-d8e9c5914c9f" ImageBase64="" InformativeScreenshot="78a5cf21bd807c4891b8403afe9255bc.png" Reference="dLzBtWiWl0Cuc9sJblPtmg/hmIr4ad7Ik66Az1sdEHtLQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Autodoc - GDFor | Colaborador' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="715, 812, 174, 18" ElementType="Text" FriendlyName="'Responsavel Colaborador'" FullSelectorArgument="&lt;webctrl parentid='campo-responsavel' tag='LABEL' aaname='Responsável pelo Colaborador ' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='campo-responsavel' tag='LABEL' aaname='Responsável pelo Colaborador ' check:innerText='Responsável pelo Colaborador' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALIAAAAWCAYAAABkB8aQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAANSSURBVGhD7ZfLceJAFEUnFfJwEKRABE6AAAiAPWsCIAfnQAxs2co+Lq7r+k63+I7NqN6pUqk/799PQvwZimICVCMXk6AauZgE1cjFJKhGLiZBNXIxCb418na7HWaz2dc1n8+Hw+Fw2v2/IJfVanWa3QY2uB4JMb29vZ1m13HL+bD/+vp6Vm6/3w/L5XI4Ho+nlZ/jEb7/amQ/OApOEX4juXsg7nubGJ6pkYnjlrOoRv4AB4vF4mwRpsqzNPI951CN/EG+2Zi3fta4M9ee3hzY2mw2w8vLy+c6d4IWjLXH5b5Tl0sNgG18aF2x9NYzD/CG6uWV9RDEjb77crmMw/fcb8oxZi1pxZ+wLzt5NtjV3OX8PLgjxwOj/bGcPFZ01+v1l230Ut5jyj2a2Bt5rC/ws9vtPvfd5ug3shcP4+lMc/R0OA7rmbDeLFlgJSc7LV35Q8aT64EMFzroYgPclo9zT/oJMhRR9pD12Kmb18PnvTHgy2sueusi48Smapd1dpCT3Wtz8pjQobF8P/EYM17GvXhbcUjW6b6RuXvxmHuTc+mJUCL+hIDbA5yrobyIwuVTF7vIK1l8+RtFIOMxtuzl2OW5lIfLOfj05gfJKra0KTvER+7I+YFByy60aiW8psJtpx/i8Lhk91xOY7H24m6dRSte1z/XF6pf0m1kgubtKYe+1wMdDlFPTOp4Evc0smCMr17j+Vz6fofUcXp7rYOTLHbz0B0dREuuZRdY730je02F2/Zx1tzn1+bk8mO6QvNWvK5/ri9Uv+Tib2ScXfKHw5PGFmMl6AFncVhjriAzFuSIRbYEcxWGfenInttgX5cYyytjEOjw8HAHjwE8joQ95ehjQMdjc1jv7WWc2FTdvc5p321eklMvVmR0roI9xZRn4XvAuBUvSLdXMzHayGmEu/9UKBF0fF02uJOgPtzzU4Cx9riyUB4LieGPmHpxuD3u/Fl0G9JzPzCWl+sL/FAXHgDpuJzqpj3P2w8i5eS3Bz4km/KMtY5NbIM3Bpd/9lAf/jwB8WHD4xnLyX2jm408dhZpS38Upe+6XH5eyOX5wbdGfjQE7sWYCq2DK36XauQbqEZ+PqqRb6Aa+fn4p41cFD9FNXIxCaqRi0lQjVxMgGF4Bw4Tdh6QrRFwAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NSelectItem.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NSelectItem>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="490,345" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <If sap2010:Annotation.AnnotationText="Em caso do erro acontecer por conta de um valor não encontrado no dropdown, o robô gera uma business Exception.&#xA;Em caso de outro tipo de erro, ele apenas da um rethrow" Condition="[exception.Message.Contains(&quot;It was not found among existing items&quot;)]" DisplayName="If - Item nao encontrado" sap:VirtualizedContainerService.HintSize="484,276" sap2010:WorkflowViewState.IdRef="If_4">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Throw DisplayName="Throw - Item nao encontrado" Exception="[new BusinessRuleException(&quot;A empresa de CNPJ '&quot; + in_strEmpresa + &quot;' não foi encontrada no campo específico do GD4.&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                      </If.Then>
+                      <If.Else>
+                        <Rethrow sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Rethrow_1" />
+                      </If.Else>
+                    </If>
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="0.5" DisplayName="Type Into - Funcao" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,216" sap2010:WorkflowViewState.IdRef="NTypeInto_18" InteractionMode="HardwareEvents" ScopeIdentifier="84031252-efa3-4ec7-952d-0aa600d45067" Text="[in_strFuncao]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://gd4.autodoc.com.br/dashboard/empresa/colaborador/form" ContentHash="MXsT2g1MnkOutZMRSY4O5Q" DesignTimeRectangle="1288, 836, 551, 32" ElementType="Text" FriendlyName="'Funcao'" FullSelectorArgument="&lt;webctrl id='select2-funcao_id-container' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='select2-funcao_id-container' tag='SPAN' check:text='' /&gt;" Guid="342d2171-3442-4811-8880-1f633c8756eb" ImageBase64="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" InformativeScreenshot="a2469286511e06af7a31d1a74f2b9730.png" Reference="dLzBtWiWl0Cuc9sJblPtmg/pwAjPBIA0kCG6eWE0Ib6VA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Autodoc - GDFor | Colaborador' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1286, 812, 51, 18" ElementType="Text" FriendlyName="'Funcao'" FullSelectorArgument="&lt;webctrl aaname='Função*' tag='LABEL' type='' /&gt;" FuzzyAccuracy="0.62" FuzzySelectorArgument="&lt;webctrl aaname='Função*' tag='LABEL' type='' check:innerText='Função *' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADcAAAAWCAYAAABkKwTVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAFASURBVFhH7ZTtEUNAEIbTij4UoQUVaEABCtCEAvSgBzX46+9lnhub2WwkSDhDPDM3nP18by+5uRNziTsql7ij8j/iqqpyURQ9raZpBuu6tG3r4jh2RVG4vu9dXdeDZTn0SB7LizhWCBCDQBr79RCJHet7N3FrwLTsTcuyzN8EmCXOfufE8zz3Sbqu80XYjxUA3YTYZGKydH7s+NmYMXR9O/2Pv7kkSXzwlDj8dGKKyZ449p8gBwJ4go6HdznkEPClJ/rgKawyOd0Y4EtB7PjpggLf+EOxBzmWT9dbwi7ibIzeWxsEFcc7DUyJk3cdCzSbpukjBl+ZHMy9llPMEkdRissVKsvSF5sjDvCVWDkU/Y2psJcc2PET+zfC4EnclnAg9npuTTBxMi094a0JIo4rqq9kKIJNbg8ucUflxOKcuwPmoeF6znAa8wAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <TryCatch sap2010:Annotation.AnnotationText="Realiza a tentativa de clicar na função desejada no GD4, caso gere um erro, o robô lança uma business avisando a área" DisplayName="Try Catch -  Função encontrada" sap:VirtualizedContainerService.HintSize="434,123" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <TryCatch.Try>
+                <uix:NClick ClickType="Single" DelayBefore="1" DisplayName="Click - Função encontrada" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="84031252-efa3-4ec7-952d-0aa600d45067" Timeout="4" Version="V1">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://gd4.autodoc.com.br/dashboard/empresa/colaborador/form" DesignTimeRectangle="1292, 763, 543, 26" ElementType="ListItem" FriendlyName="'CLT (Escritório)'" FullSelectorArgument="[String.Format(&quot;&lt;webctrl class='select2-results__option select2-results*' aaname='*{0}*' parentclass='select2-results__options' /&gt;&quot;, in_strFuncao)]" FuzzyAccuracy="0.7" FuzzySelectorArgument="[&quot;&lt;webctrl class='select2-results__option select2-results*' aaname='&quot;+in_strFuncao+&quot;*' parentclass='select2-results__options' check:text='&quot;+in_strFuncao+&quot;*' /&gt;&quot;]" Guid="49f76eaa-b764-45f6-98e1-b8ab66250579" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAiMAAAAeCAYAAAD+UR7rAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAO5SURBVHhe7dxNalRBFMVxwa25DlfhDlyHC3DqWHAkOBFHGcaRghAQlKCJ+Wg9bZ/m9qWqXlW3sULnf+BHJ6/qVVU/B/cmaXy0IoQQQgiZGJoRQgghhEzNthl5/PIcAADgv3FoRgAAwBQOzQgAAJjCoRkBAABTODQjAABgCodmBAAATOHQjAAAgCkcmhEAADCF092MPH13sfp+tZm8yesv1+vrn37crl/jfI2VorlP3vzcmavvdf3Fx6viPqV77prOonPk97UPrXF2sVo9P/lVHG/RPZc3mwfxJ3qutbF43tZ94ud88u1m57romtO7HwAAo5yuZsSFSwW6NFZqRkxNxOn5bbMQa10XxaX1DqV9cmHORs7Qs57E9zji1efrbSOWn6XWrO29dJ//Pd9/3T1TPOfIfgAAjHK6mpFWwV0q3LmglWh9FTp9PdIIHEpnUtEujf1rPc+hR3xWI81BvM90ltyM5Hlxj5H9AABY4iw2I0tF9NBmJN/fWk/FMCYWRhVRR/drXxVaNRv604L/pOBiW1srX9f3uu5735793Udfe1/P0Z7a2/E5NJbn7iM/S505xmfKav8GuRkpzdN5vW7vfgAA9HAWmxEV4dbnHVrNg9QKoem6xl20tY4ahxgVQY2r+JX20XipMOpaqyHQq5sQKZ3F793nivMlrhe/lnwufZ/vH5HXyzRWWr92n95XbkY0Lz7j/Eyi2n4AAPRwpv9mJBe71noqfEosrK31NS82B/labkb0dS6unl87V2s8v7fS+prv5is3TpH2aI2L5sRn42u1+3S+kd+MZK0xAACWONM/M5IL9tJ6oiKo6Eyt9d0o1K7pNb6vUrPg+bVztcbzeyut30Pr1xqKSPN0nvh96z6db+QzI1neDwCAEU5XM6KipZ/eSwW/VqSt1SxIvn9pPYuFsFbkc2HN13Ixzc2DzhD/TFM6V1wv76czxfXzeA/NbzUUpnHN8/o99+l95WZE9/nMec2oNQYAQA+nqxkRFeH4WQ59KNRFOn/GIxZBvbaakVzUaus9+3C5fnW8v9dRAXW8f6n4x2txLzczGnPiHpqrdfXqtSSu5/fiuKh7rPUcSvJ6jtfVa0ztHE48j+gsuRmRuG5s8mr7AQCwD6e7GblLKmq5UB6bh/AeAQAY4dyLZsQ/yR/rT9r6bcq+/wMrAADHyrkXzQgAAHh4HJoRAAAwhUMzAgAApnBoRgAAwBQOzQgAAJjCoRkBAABTONtmhBBCCCFkRmhGCCGEEDI1NCOEEEIImZjV6jcJXj8vtxKNvAAAAABJRU5ErkJggg==" InformativeScreenshot="7005fbf65b3afa8f8b3557c9d9ee8f15.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Autodoc - GDFor | Colaborador' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="1286, 671, 51, 18" ElementType="Text" FriendlyName="'Função *'" FullSelectorArgument="&lt;webctrl aaname='Função*' tag='LABEL' type='' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Função*' tag='LABEL' type='' check:innerText='Função *' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADcAAAAWCAYAAABkKwTVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAFASURBVFhH7ZTtEUNAEIbTij4UoQUVaEABCtCEAvSgBzX46+9lnhub2WwkSDhDPDM3nP18by+5uRNziTsql7ij8j/iqqpyURQ9raZpBuu6tG3r4jh2RVG4vu9dXdeDZTn0SB7LizhWCBCDQBr79RCJHet7N3FrwLTsTcuyzN8EmCXOfufE8zz3Sbqu80XYjxUA3YTYZGKydH7s+NmYMXR9O/2Pv7kkSXzwlDj8dGKKyZ449p8gBwJ4go6HdznkEPClJ/rgKawyOd0Y4EtB7PjpggLf+EOxBzmWT9dbwi7ibIzeWxsEFcc7DUyJk3cdCzSbpukjBl+ZHMy9llPMEkdRissVKsvSF5sjDvCVWDkU/Y2psJcc2PET+zfC4EnclnAg9npuTTBxMi094a0JIo4rqq9kKIJNbg8ucUflxOKcuwPmoeF6znAa8wAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NClick.Target>
+                </uix:NClick>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,104" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <Throw DisplayName="Throw - Item nao encontrado" Exception="[new BusinessRuleException(&quot;A função '&quot; + in_strFuncao + &quot;' não foi encontrada no campo específico do GD4.&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+            <TryCatch sap2010:Annotation.AnnotationText="Realiza a tentativa de clicar na obra desejada no GD4, caso gere um erro, o robô lança uma business avisando a área" DisplayName="Try Catch -  Obra" sap:VirtualizedContainerService.HintSize="434,308" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <TryCatch.Try>
+                <uix:NClick ClickType="Single" DelayBefore="1" DisplayName="Click - Obra" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_14" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="84031252-efa3-4ec7-952d-0aa600d45067" Timeout="5" Version="V1">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://gd4.autodoc.com.br/dashboard/empresa/colaborador/form" ContentHash="tSR32gR-tECtGs51fvKuOQ" DesignTimeRectangle="758, 579, 150, 21" ElementType="Text" FriendlyName="'Obra (dinamico)'" FullSelectorArgument="[&quot;&lt;webctrl parentid='div-obras' tag='LABEL' aaname='*&quot;+ in_strObra +&quot;*' /&gt;&quot;]" FuzzyAccuracy="0.76" FuzzySelectorArgument="[&quot;&lt;webctrl parentid='div-obras' tag='LABEL' aaname='*&quot;+ in_strObra +&quot;*' /&gt;&quot;]" Guid="65b2aca7-5e51-4bb2-8e8f-769f6a1edb12" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJoAAAAZCAYAAADJ2zdhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIPSURBVGhD7ZbNjcIwEEa3FfqgCFqgAhqgAArgzpkC6IEeuHLlytWrJzHRx8gxORBvVvqeZOG/TJzMw85PMaYDFs10waKZLlg00wWLZrpg0UwXLJrpgkUzXbBopguDaM/ns+x2u7JarYay2WzK4/F4zVgOrIm1LnFtps6baPv9vtxut1dPKefzuRwOh1drOVi0/0dTNOr0MbYkLNr/4+OORgmu1+vb0Uo7OB6P5XK5lPV6PRy5eT4ldkgd0yOaX9oxhlBZ9JZoxI9rWYs+j45FiWfQsfzJ0IppptH8RlPJ8u5GIrbb7fDSSYZKkcf5Rcaoayxtc08VuEZLNIU4rCvquj69T+0PpXMVjWmm83FHixeekwG88EiW1qEmmsqkQlNiF2Ge7oo1WqLl2C3RKLXnzvHHYprpNEXjRYcskRilJRrQjuTokVOLleHeyFbbWbIIAfdTCXKbeqwn4n4S7VNMM42maNQRjRdOPXYkoC8fnSRBqfWBxm2hCVfG+pFXJaAe7bFrIIvPmkPEVkwzneY3Wv7wJQFjY7z8LJXOp+hxmMcieSRW+1WAgBjE0nms/X6/v/WfTqfhuxC4h16jwuhYSAb5XjmmmcYg2rdBJE0k5J2jJ6xF/wi1HdzMx2yi1aTKye5FTarWUWq+z2yi1Y7iv9rNAMk47mMt+eg38zKbaMYoFs10waKZLlg004FSfgGh1SoqElhHVAAAAABJRU5ErkJggg==" InformativeScreenshot="ef182b3245a0f50b5a294b835642cb7f.png" Reference="dLzBtWiWl0Cuc9sJblPtmg/kqnjytmH-0K64cYhnAKPMw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Autodoc - GDFor | Colaborador' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="707, 547, 571, 20" ElementType="Text" FriendlyName="'Obra (dinamico)'" FullSelectorArgument="&lt;webctrl aaname='Obras*' parentid='user-profile' tag='DIV' /&gt;" FuzzyAccuracy="0.72" FuzzySelectorArgument="&lt;webctrl aaname='Obras*' parentid='user-profile' tag='DIV' check:innerText='Obras*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAj8AAAAYCAYAAAAVmpyQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAOqSURBVHhe7d3NK21RGMfx+68YyNDURAkDUjITRZFI8laSAclAmSilKCFTkWIoQlEyQZEQoSTveT+I5/Zb9nE57Ys9kHvb30+t2Gs/52X461lr7fPLAAAAQoTwAwAAQoXwAwAAQoXwAwAAQoXwAwAAQoXwAwAAQuXbws/g4KC1tbV5Vz9ncXHRKioq7OrqypsBAABhFjj83N/f29DQkGVmZlpcXJwlJCRYeXm5ra6uehUvfjr8PD4+ur+bm5vW2Nhot7e39vz8bE9PT24eAACEU6DwowDR0NBgxcXFtrW15YKEwtDExISlp6fb7OysV/mz4ScSiVhdXZ3l5eVZd3e3+84dHR2WmprqvhcAAAivQOFnenracnNz7ejoyJv5Y3Jy0i0vXV9fu2uFjKamJuvq6rLExEQ39P/d3Z27f3p6atXV1ba2tuZeFx8fbwsLCy5gdXZ2WnJysussZWRkuPmo9fV1KygocPXqOtXU1Ph+HwWz8/Nz6+npsbS0NJufn2fpCwAABAs/7e3t1t/f7129d3x87DotKysr7lrhR4FnZmbGLTfd3NxYS0uLC0C6VvhRiCkrK3MBSGFFQ8tVOzs7r8tWS0tLVlhYaCcnJy5YVVZWuvcU1Ws+WhtLgUf1c3NzVlJSYoeHh94dAAAQVl8OP+rIqFMzMjLizbwXva/AIQo/utZ8lIKRgow6Mgo/OTk5Nj4+7t31p7qioiK3d0edG3WJpqamXID6yMPDg/X29rpahSMFt2hoAgAA4fWt4Sd2z8/BwYHr9mxvb78LNW9pD9Ho6KjrIikcZWVlWUpKymudOkHZ2dlWWlrqPutvXR8AAAA/37rs5Rd+FHj29vZ8w4+6OVoWq62ttcvLSzfnV6fAo+CjjddaNlMNAADAVwTe8KzOjZatYvltePZb9lLH5uLiwjfUxHaPREFJm6xjO0SiLlF9ff27egAAgI8ECj8KJzo2XlVVZbu7u65T89FR96SkJLfnRhuT1clRR2dgYOB1w7NfR6e5udn6+vrca3QyTEfUdVpLdfqst5uh9/f3XRhbXl521wAAAJ8JFH5EAeTtQw51okthaGNjw6t4ofAzPDz84VH32PAjen5Qfn7+6zF3BarW1lZXpw3POjGm99J9PbdnbGzMBSUAAICvCBx+AAAA/meEHwAAECqEHwAAECqEHwAAECqEHwAAECqBwo+OmJ+dnbln7+hUFoPBYDAYDMb/Nr4cfhR89ITmSCTy6e9qAQAA/JvMfgNUvd++DWChnwAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NClick.Target>
+                </uix:NClick>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,104" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <Throw DisplayName="Throw - Item nao encontrado" Exception="[new BusinessRuleException(&quot;A obra '&quot; + in_strObra + &quot;' não foi encontrada no campo específico do GD4.&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_4" />
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" ContentHash="L3wu_QckiUuX6q3uz2n_Tg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAALzSURBVDhPTZJJT1NhGIXfBBpZERVKob23LZQylfoDXDjFGL7hYljwawyJQ1wY2ZhotIgTigoyyCiDA6AIKIgDgyKDvTiFxAFXRgqv52qJfslZ3ifPe86lzTdZoGkyrNNeFury6SLdNFOs9y+UaHMxoufflVq2HbWuvo9aBz5GrS0folbyK7yxPElj+RpR3vGwPg3Qd0DWXxXpirliy5gr0fZCxOKlUosB+bIctaoBykLoww5N9DBP0VCu8j0OqY7RfMVPw5qfFegEQBUzRdqAif2mRPNbZBGgeKm1AVAzQB6EqC8g0x7kqrNDeYofhRSPAPIkrH8CpGBiIDZO4tlizbDhpM0GQNV2RLuoNyDL+4Pq2/1cxYOAwOg7bKpgkz4R1gHY2C8KNeMkhg07NvORPzYrSxG9j7r8svGOX3FfQPG9oErA5tBoSKWgE6eXIGzsiQLNOIlhw47N66TNfImupTZDLneYkrsB6Q2oqf6A9CE0HFJOgrCxUfJmN+zYTCVtAJqjZp9cazUktwPSacqGHr9I6TYlDWGdwTxp4qQRgGycFAckDpv480Idx0lx2ExTg1f+uuWV3OKTfNuQje2GSG0zBA3kSiep6MUHiB8mfpxkjhdo73ME53hh4qX6bLl0I0dyIyBNPjkDIxNJ/iX/HlZysh2wg4BVAlYJo31U5xGXr2ZLvg4IbNYBOgKjVCT5KdHdoCIUnYKlDsMogbk3nLkBidGlLLH/skes1Hkkw4Zv5shVgI4BEMRZLnSTipJ9AFT1BdUqluIBTA6TT+hmF9W6peuCW5y8mCU2rngEX/trkwBkHpB2QJqx1AwKXnPmxlIMo3XMfXw4pFOoxi2oJlO4z7tF/YUssQ4b/s+GnYLRiVMwO3Pjv0n0BFQdpt6Ov5jo1NY9FMsUTjIAO1HrFiuw4U0bp2DYOAUz5v7cbsijXabc1mkq6kzfm2wJL5ZZRucyylyw2Q1IDJBZ2PxAwV9x0iwgZwDZ2eoVrhavSH5F9BudtKoV0nmxngAAAABJRU5ErkJggg==" InformativeScreenshot="182f780fe03c9a8d084b5728c8395fac.png" Reference="dLzBtWiWl0Cuc9sJblPtmg/eBvReatHLk-SwKhmmYDCMA" Selector="&lt;html app='chrome.exe' title='Autodoc - GDFor*' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
